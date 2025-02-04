@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "darknessconsumesall",
+  "version": "${version}",
+  "name": "Darkness Consumes All",
+  "description": "The shadows are alive — and they hunger.",
+  "authors": ["ISeal"],
+  "contact": {
+    "discord": "https://discord.iseal.dev/",
+    "website": "https://iseal.dev/",
+    "issues": "https://github.com/iseal56/DarknessDeath/issues",
+    "sources": "https://github.com/iseal56/DarknessDeath/",
+    "homepage": "https://modrinth.com/project/darknessconsumesall"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/darknessconsumesall/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "dev.iseal.darknessconsumesall.client.DarknessConsumesAllClient"
+    ],
+    "main": [
+      "dev.iseal.darknessconsumesall.DarknessConsumesAll"
+    ],
+    "fabric-datagen": [
+      "dev.iseal.darknessconsumesall.client.datagen.DDDatagen"
+    ]
+  },
+  "mixins": [
+    "darknessconsumesall.mixins.json",
+    {
+      "config": "darknessconsumesall.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
